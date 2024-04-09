@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { useState, useEffect } from 'react';
 import Channel from './pages/Channel'; // Adjust the import path
