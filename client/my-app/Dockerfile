@@ -1,17 +1,28 @@
-FROM node:14-slim
+# Use a base image with Node.js pre-installed
+FROM node:latest
 
-WORKDIR /user/src/app 
+# Set the working directory inside the container
+WORKDIR /usr/src/app
 
-COPY ./package.json ./
+# Copy package.json and yarn.lock to the working directory
+COPY package.json .
+COPY yarn.lock .
 
-COPY ./yarn.lock ./
+# Update npm to the latest version
+RUN npm install -g npm@latest
 
-RUN npm install 
+# Remove existing node_modules
+RUN rm -rf node_modules
 
+# Install project dependencies
+RUN npm install
+
+# Copy all files from the current directory to the working directory in the container
 COPY . .
 
+# Expose port 3000 to allow communication to/from the container
 EXPOSE 3000
 
+# Set the entry point and default command to start the application
 ENTRYPOINT [ "npm" ]
-
 CMD ["start"]
