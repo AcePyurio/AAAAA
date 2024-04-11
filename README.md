@@ -1,5 +1,61 @@
 # Cloud-Based Restaurant Reservation System
 
+
+# Running the App
+
+To run the application locally, follow these steps:
+
+## Clone the Repository
+
+Clone the repository using the following command:
+
+
+git clone https://github.com/AcePyurio/proj.git
+
+
+## Navigate to the Directory
+
+Navigate to the directory where you cloned the repository:
+
+
+cd proj
+
+
+## Start the Docker Container
+
+Open your command line interface (CLI) or terminal in the directory where you cloned the repository and run the following command to start the Docker container:
+
+docker-compose up
+
+
+This command will build and start the Docker containers defined in the `docker-compose.yml` file.
+
+## Access the Application
+
+Once the Docker container is running, you can access the application by opening your web browser and navigating to the following URL:
+
+
+http://localhost:3000
+
+
+This URL will direct you to the app running on your local machine. You can now use the application as intended.
+
+## Shutting Down the Application
+
+To stop the application and shut down the Docker containers, you can press `Ctrl + C` in the terminal where you ran `docker-compose up`. This will gracefully stop the containers.
+
+Alternatively, you can run the following command in the same directory to stop and remove the Docker containers:
+
+
+docker-compose down
+
+
+This command will stop and remove the containers defined in the `docker-compose.yml` file.
+***************************************
+***************************************
+***************************************
+
+
 ## Product Vision
 
 FOR restaurants and diners WHO seek a streamlined and efficient reservation management solution, THE Reserve system is a cloud-based reservation platform THAT facilitates seamless booking, management, and cancellation of reservations online. UNLIKE traditional reservation methods, such as phone calls or in-person bookings, OUR product offers a user-friendly interface accessible anytime, anywhere, enabling customers to easily reserve tables and providing restaurant staff with tools to efficiently manage booking availability and customer information.
